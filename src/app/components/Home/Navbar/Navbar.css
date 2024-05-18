@@ -1,0 +1,16 @@
+/* Navbar.css */
+.navbar {
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar.transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+  
