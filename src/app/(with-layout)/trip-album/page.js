@@ -1,6 +1,8 @@
 
 import ContainerPage from "@/app/container/page";
 import Image from "next/image";
+import TripAlbums from "@/app/components/TripAlbums/tripalbums";
+
 
 
 const TripAlbum = () => {
@@ -14,7 +16,11 @@ const TripAlbum = () => {
                         <div className="border-b-2 w-3/4"></div>
                     </div>
 
-                 
+                    {/* Images Lines Album */}
+
+                    <TripAlbums />
+
+
                 </div>
             </ContainerPage>
         </div>
