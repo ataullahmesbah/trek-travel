@@ -11,7 +11,9 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-200 text-gray-700 p-2 fixed w-full top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">Trek Explore Travel</div>
+        <Link href="/">
+          <div className="text-2xl font-bold">Trek Explore Travel</div>
+        </Link>
         <div className="hidden md:flex space-x-6">
           <Link href="/" legacyBehavior><a>Home</a></Link>
           <div
