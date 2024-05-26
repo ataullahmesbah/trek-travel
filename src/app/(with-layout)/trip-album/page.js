@@ -13,8 +13,6 @@ const TripAlbum = () => {
         <div className="bg-gray-50 p-10">
             <ContainerPage>
 
-
-
                 <div className="mt-10">
                     <h1 className="text-black font-semibold text-xl text-center">Video Album</h1>
                     {/* underline */}
@@ -23,10 +21,6 @@ const TripAlbum = () => {
 
                         </div>
                     </div>
-
-
-
-                    {/* Images Lines Album */}
 
                     <VideoGallery />
 

@@ -1,33 +1,19 @@
-'use client'
+import React from 'react';
+import YouTubeEmbed from '../YouTubeEmbed/YouTubeEmbed';
 
-import Image from 'next/image';
-// VideoGallery.js
 
-import { useState } from 'react';
-
-const VideoGallery = ({ videos }) => {
-    const [currentVideo, setCurrentVideo] = useState(null);
-
-    const playVideo = (videoUrl) => {
-        setCurrentVideo(videoUrl);
-    };
+const videoGallery = () => {
+    const videoIds = [
+        'i1Ms7lmRD3c?si=OnZ0Tz18AkNz2p0I',
+        'y0wXQ5EdW_0?si=KYXyerD86qgi7Ro-',
+        'wFn-jqLc10k?si=93liFfdFnBE3rb4U',
+    ];
 
     return (
-        <div className="video-gallery">
-            {/* Check if videos is defined and not null before mapping over it */}
-            {videos && videos.map((video, index) => (
-                <div key={index} className="video-thumbnail">
-                    <Image src={video.thumbnailUrl} alt="Video Thumbnail" />
-                    <button onClick={() => playVideo(video.videoUrl)}>Play Video</button>
-                </div>
-            ))}
-            {currentVideo && (
-                <div className="video-player">
-                    {/* Your video player code */}
-                </div>
-            )}
+        <div className="p-4">
+            <YouTubeEmbed videoIds={videoIds} />
         </div>
     );
 };
 
-export default VideoGallery;
+export default videoGallery;
