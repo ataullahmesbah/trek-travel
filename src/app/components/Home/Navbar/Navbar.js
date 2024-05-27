@@ -53,7 +53,7 @@ const Navbar = () => {
           </div>
           <Link href="/trip-album" legacyBehavior><a>Trip Album</a></Link>
           <Link href="/blogs" legacyBehavior><a>Blogs</a></Link>
-          <Link href="/about" legacyBehavior><a>About Us</a></Link>
+          <Link href="/aboutus" legacyBehavior><a>About Us</a></Link>
           <Link href="/contact" legacyBehavior><a>Contact</a></Link>
           <div className="relative">
             <button className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-500">
