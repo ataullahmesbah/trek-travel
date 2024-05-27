@@ -1,66 +1,27 @@
-'use client'
+'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FaGlobeAmericas } from 'react-icons/fa';
-import { GiDetour } from "react-icons/gi";
+import { GiDetour } from 'react-icons/gi';
+
+
 
 const AdventureStories = () => {
-    const latestStories = [
-        {
-            title: 'Exploring the Alps',
-            description: 'Join us on an incredible journey through the Swiss Alps...',
-            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
-        },
-        {
-            title: 'Safari Adventure',
-            description: 'Experience the thrill of a lifetime on an African safari...',
-            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
-        },
-        {
-            title: 'Tropical Paradise',
-            description: 'Discover the beauty of the Caribbean islands...',
-            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
-        },
-    ];
+    const [stories, setStories] = useState([]);
 
-    const allStories = [
-        // Add more stories as needed
-        {
-            title: 'Majestic Mountains',
-            description: 'Exploring the majestic mountains of Patagonia...',
-            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
-        },
-        {
-            title: 'City Lights',
-            description: 'The vibrant life of New York City...',
-            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
-        },
-        {
-            title: 'Desert Safari',
-            description: 'An unforgettable adventure in the Sahara Desert...',
-            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
-        },
-        {
-            title: 'Majestic Mountains',
-            description: 'Exploring the majestic mountains of Patagonia...',
-            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
-        },
-        {
-            title: 'City Lights',
-            description: 'The vibrant life of New York City...',
-            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
-        },
-        {
-            title: 'Desert Safari',
-            description: 'An unforgettable adventure in the Sahara Desert...',
-            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
-        },
-    ];
+    useEffect(() => {
+        // Fetch the stories from the JSON file
+        fetch('/stories.json')
+            .then(response => response.json())
+            .then(data => setStories(data));
+    }, []);
+
+    const latestStories = stories.slice(0, 3);
+    const allStories = stories.slice(3);
 
     return (
         <div className="bg-gray-50 mt-14">
-            {/* Banner Section */}
             {/* Banner Section */}
             <div className="relative w-full h-[50vh]">
                 <Image
@@ -91,6 +52,7 @@ const AdventureStories = () => {
                                 alt={story.title}
                                 width={600}
                                 height={400}
+                               
                                 className="w-full h-48 object-cover"
                             />
                             <div className="p-4">

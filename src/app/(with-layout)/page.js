@@ -1,5 +1,6 @@
 import Banner from "../components/Home/Banner";
 import Trip from "@/app/components/trip";
+import LatestStories from "../components/Home/LatestStories/LatestStories";
 
 export const metadata = {
     title: 'Trek Explore Travel',
@@ -11,7 +12,7 @@ export default function Home() {
     return (
         <main className="">
             <Banner />
-            <Trip />
+            <LatestStories />
         </main>
     );
 }
