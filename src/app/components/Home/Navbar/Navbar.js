@@ -52,6 +52,8 @@ const Navbar = () => {
             )}
           </div>
           <Link href="/trip-album" legacyBehavior><a>Trip Album</a></Link>
+          <Link href="/travelstories" legacyBehavior><a>Travel Stories</a></Link>
+
           <Link href="/blogs" legacyBehavior><a>Blogs</a></Link>
           <Link href="/aboutus" legacyBehavior><a>About Us</a></Link>
           <Link href="/contact" legacyBehavior><a>Contact</a></Link>
@@ -114,6 +116,7 @@ const Navbar = () => {
             )}
           </div>
           <Link href="/trip-album" legacyBehavior><a className="block px-4 py-2">Trip Album</a></Link>
+          <Link href="/travelstories" legacyBehavior><a className="block px-4 py-2">Travel Stories</a></Link>
           <Link href="/blogs" legacyBehavior><a className="block px-4 py-2">Blogs</a></Link>
           <Link href="/about" legacyBehavior><a className="block px-4 py-2">About Us</a></Link>
           <Link href="/contact" legacyBehavior><a className="block px-4 py-2">Contact</a></Link>
