@@ -15,7 +15,7 @@ const banners = [
         description: 'Our latest stories are here'
     },
     {
-        imageUrl: 'https://i.ibb.co/hKh5Gqp/image.png',
+        imageUrl: 'https://i.ibb.co/ynKrNnL/IMG20220714094755-00.jpg',
         title: 'Discover New Places',
         description: 'Join us on our journey through stunning visuals'
     },
