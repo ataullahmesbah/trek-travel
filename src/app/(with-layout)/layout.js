@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Home/Navbar/Navbar";
 
 
@@ -9,6 +10,7 @@ const WithLayout = ({ children }) => {
 
             <Navbar />
             {children}
+            <Footer />
 
 
         </div>

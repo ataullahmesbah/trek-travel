@@ -9,12 +9,12 @@ const Navbar = () => {
 
 
   return (
-    <nav className="bg-gray-200 text-gray-700 p-2 fixed w-full top-0 z-50">
+    <nav className="bg-sky-950 text-white p-2 fixed w-full top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <div className="text-2xl font-bold">Trek Explore Travel</div>
         </Link>
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 items-center">
           <Link href="/" legacyBehavior><a>Home</a></Link>
           <div
             className="relative"
@@ -26,10 +26,10 @@ const Navbar = () => {
             </button>
             {subMenuOpen.destination && (
               <div className="absolute bg-blue-50 p-6 pr-10 rounded shadow-lg mt-2">
-                <Link href="/destination/nepal" legacyBehavior><a className="block text-black  ps-2 py-1 hover:bg-gray-50 rounded-md">Bangladesh</a></Link>
-                <Link href="/destination/nepal" legacyBehavior><a className="block text-black  ps-2 py-1 hover:bg-gray-50 rounded-md">Nepal</a></Link>
-                <Link href="/destination/nepal" legacyBehavior><a className="block text-black  ps-2 py-1 hover:bg-gray-50 rounded-md">India</a></Link>
-                <Link href="/destination/nepal" legacyBehavior><a className="block text-black  ps-2 py-1 hover:bg-gray-50 rounded-md">Maldives</a></Link>
+                <Link href="/destination/nepal" legacyBehavior><a className="block text-white  ps-2 py-1 hover:bg-gray-50 rounded-md">Bangladesh</a></Link>
+                <Link href="/destination/nepal" legacyBehavior><a className="block text-white  ps-2 py-1 hover:bg-gray-50 rounded-md">Nepal</a></Link>
+                <Link href="/destination/nepal" legacyBehavior><a className="block text-white  ps-2 py-1 hover:bg-gray-50 rounded-md">India</a></Link>
+                <Link href="/destination/nepal" legacyBehavior><a className="block text-white  ps-2 py-1 hover:bg-gray-50 rounded-md">Maldives</a></Link>
 
               </div>
             )}
@@ -44,10 +44,10 @@ const Navbar = () => {
             </button>
             {subMenuOpen.gadgets && (
               <div className="absolute bg-blue-50 p-6 pr-10 rounded shadow-lg mt-2 w-64">
-                <Link href="/gadgets/accessories" legacyBehavior><a className="block text-black  ps-2 py-1 hover:bg-gray-50 rounded-md">Travel Accessories</a></Link>
-                <Link href="/gadgets/travel-gadget" legacyBehavior><a className="block text-black  ps-2 py-1 hover:bg-gray-50 rounded-md">Travel Gadget</a></Link>
-                <Link href="/gadgets/bags" legacyBehavior><a className="block text-black  ps-2 py-1 hover:bg-gray-50 rounded-md">Sleeping Bag</a></Link>
-                <Link href="/gadgets/mat" legacyBehavior><a className="block text-black  ps-2 py-1 hover:bg-gray-50 rounded-md">Mat</a></Link>
+                <Link href="/gadgets/accessories" legacyBehavior><a className="block text-white  ps-2 py-1 hover:bg-gray-50 rounded-md">Travel Accessories</a></Link>
+                <Link href="/gadgets/travel-gadget" legacyBehavior><a className="block text-white  ps-2 py-1 hover:bg-gray-50 rounded-md">Travel Gadget</a></Link>
+                <Link href="/gadgets/bags" legacyBehavior><a className="block text-white  ps-2 py-1 hover:bg-gray-50 rounded-md">Sleeping Bag</a></Link>
+                <Link href="/gadgets/mat" legacyBehavior><a className="block text-white  ps-2 py-1 hover:bg-gray-50 rounded-md">Mat</a></Link>
               </div>
             )}
           </div>
@@ -58,7 +58,7 @@ const Navbar = () => {
           <Link href="/aboutus" legacyBehavior><a>About Us</a></Link>
           <Link href="/contact" legacyBehavior><a>Contact</a></Link>
           <div className="relative">
-            <button className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-500">
+            <button className="bg-sky-900 px-3 py-2 rounded hover:bg-sky-900 text-white font-medium">
               Log In
             </button>
             <div className="absolute bg-gray-700 p-2 rounded shadow-lg hidden group-hover:block">
@@ -92,10 +92,10 @@ const Navbar = () => {
             </button>
             {subMenuOpen.destination && (
               <div className="bg-blue-50 p-2 rounded shadow-lg">
-                <Link href="/destination/nepal" legacyBehavior><a className="block text-black hover:bg-gray-50 rounded-md px-4 py-2 ">Bangladesh</a></Link>
-                <Link href="/destination/nepal" legacyBehavior><a className="block text-black hover:bg-gray-50 rounded-md px-4 py-2 ">Nepal</a></Link>
-                <Link href="/destination/nepal" legacyBehavior><a className="block text-black hover:bg-gray-50 rounded-md px-4 py-2 ">India</a></Link>
-                <Link href="/destination/nepal" legacyBehavior><a className="block text-black hover:bg-gray-50 rounded-md px-4 py-2 ">Maldives</a></Link>
+                <Link href="/destination/nepal" legacyBehavior><a className="block text-white hover:bg-gray-50 rounded-md px-4 py-2 ">Bangladesh</a></Link>
+                <Link href="/destination/nepal" legacyBehavior><a className="block text-white hover:bg-gray-50 rounded-md px-4 py-2 ">Nepal</a></Link>
+                <Link href="/destination/nepal" legacyBehavior><a className="block text-white hover:bg-gray-50 rounded-md px-4 py-2 ">India</a></Link>
+                <Link href="/destination/nepal" legacyBehavior><a className="block text-white hover:bg-gray-50 rounded-md px-4 py-2 ">Maldives</a></Link>
               </div>
             )}
           </div>
@@ -108,10 +108,10 @@ const Navbar = () => {
             </button>
             {subMenuOpen.gadgets && (
               <div className="bg-blue-50 p-2 rounded shadow-lg">
-                <Link href="/gadgets/travel-gadget" legacyBehavior><a className="block text-black hover:bg-gray-50 rounded-md px-4 py-2">Travel Accessories</a></Link>
-                <Link href="/gadgets/travel-gadget" legacyBehavior><a className="block text-black hover:bg-gray-50 rounded-md px-4 py-2">Travel Gadget</a></Link>
-                <Link href="/gadgets/bags" legacyBehavior><a className="block text-black hover:bg-gray-50 rounded-md px-4 py-2">Sleeping Bag</a></Link>
-                <Link href="/gadgets/mat" legacyBehavior><a className="block text-black hover:bg-gray-50 rounded-md px-4 py-2">Mat</a></Link>
+                <Link href="/gadgets/travel-gadget" legacyBehavior><a className="block text-white hover:bg-gray-50 rounded-md px-4 py-2">Travel Accessories</a></Link>
+                <Link href="/gadgets/travel-gadget" legacyBehavior><a className="block text-white hover:bg-gray-50 rounded-md px-4 py-2">Travel Gadget</a></Link>
+                <Link href="/gadgets/bags" legacyBehavior><a className="block text-white hover:bg-gray-50 rounded-md px-4 py-2">Sleeping Bag</a></Link>
+                <Link href="/gadgets/mat" legacyBehavior><a className="block text-white hover:bg-gray-50 rounded-md px-4 py-2">Mat</a></Link>
               </div>
             )}
           </div>
