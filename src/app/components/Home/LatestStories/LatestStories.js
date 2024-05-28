@@ -19,7 +19,7 @@ const LatestStories = () => {
     }, []);
 
     const latestStories = stories.slice(0, 3);
-    
+
 
 
 
@@ -42,7 +42,8 @@ const LatestStories = () => {
                                     alt={story.title}
                                     width={600}
                                     height={400}
-
+                                    placeholder="blur"
+                                    blurDataURL={story.imageUrl}
                                     className="w-full h-48 object-cover"
                                 />
                                 <div className="p-4">
