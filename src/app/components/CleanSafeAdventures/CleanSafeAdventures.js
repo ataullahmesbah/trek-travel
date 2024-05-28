@@ -39,7 +39,7 @@ const CleanSafeAdventures = () => {
                     ))}
                 </div>
 
-                <button className="bg-sky-900 text-white py-2 px-6 sm:py-3 sm:px-8 rounded-full shadow-md hover:bg-sky-700 transition duration-300">
+                <button className="bg-sky-900 text-white py-2 px-6 sm:py-3 sm:px-8 font-medium rounded-md shadow-md hover:bg-sky-700 transition duration-300">
                     Learn More
                 </button>
             </div>

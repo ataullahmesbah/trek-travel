@@ -17,11 +17,14 @@ const TravelPlan = () => {
                         <p className="mb-6 text-lg">
                             Adventure awaits when you set off on the trail less traveled. Explore the best of the world’s most beautiful destinations – from the well-known to the well-hidden – and get an up-close view at local life. Discover the natural wonders and dynamic cultures of our world with expert guides leading the way and every detail handled from start to finish.
                         </p>
+
                         <Link href='/' legacyBehavior>
-                            <a className="text-white hover: font-medium bg-sky-900 p-2 rounded-md transform transition duration-300 hover:scale-150">
+                            <button className="bg-sky-900 text-white font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-md shadow-md hover:bg-sky-700 transition duration-300">
                                 Plan Your Adventure Tour Now
-                            </a>
+                            </button>
                         </Link>
+
+
                     </div>
 
                     {/* Right side */}

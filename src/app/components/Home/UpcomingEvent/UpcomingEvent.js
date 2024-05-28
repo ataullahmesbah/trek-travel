@@ -22,7 +22,7 @@ const UpcomingEvents = () => {
     }, []);
 
     return (
-        <div className="bg-gray-50 py-12">
+        <div className="bg-gray-50 py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-3xl font-semibold mb-6 text-center">Upcoming Events</h1>
                 <p className="text-center mb-12 text-base sm:text-lg md:text-xl text-gray-700">Discover events throughout Taranaki and all around the world</p>
@@ -69,6 +69,11 @@ const UpcomingEvents = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+                <div className="text-center justify-center py-12">
+                    <button className="bg-sky-900 text-white px-6 sm:py-3 sm:px-8 font-medium rounded-md shadow-md hover:bg-sky-700 transition duration-300">
+                        See More
+                    </button>
                 </div>
             </div>
         </div>
