@@ -1,6 +1,10 @@
 import Banner from "../components/Home/Banner";
 import Trip from "@/app/components/trip";
 import LatestStories from "../components/Home/LatestStories/LatestStories";
+import TravelPlan from "../components/Home/TravelPlan/TravelPlan";
+import UpcomingEvents from "../components/Home/UpcomingEvent/UpcomingEvent";
+import CleanSafeAdventures from "../components/CleanSafeAdventures/CleanSafeAdventures";
+import EventSystem from "../components/Home/EventSystem/EventSystem";
 
 export const metadata = {
     title: 'Trek Explore Travel',
@@ -13,6 +17,11 @@ export default function Home() {
         <main className="">
             <Banner />
             <LatestStories />
+            <TravelPlan />
+            <CleanSafeAdventures />
+            <UpcomingEvents />
+            <EventSystem />
+
         </main>
     );
 }
