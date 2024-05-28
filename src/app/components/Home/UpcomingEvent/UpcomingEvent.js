@@ -70,8 +70,8 @@ const UpcomingEvents = () => {
                         ))}
                     </div>
                 </div>
-                <div className="text-center justify-center py-12">
-                    <button className="bg-sky-900 text-white px-6 sm:py-3 sm:px-8 font-medium rounded-md shadow-md hover:bg-sky-700 transition duration-300">
+                <div className="text-center justify-center pt-12">
+                    <button className="bg-sky-900 text-white px-6 py-3 sm:py-3 sm:px-8 font-medium rounded-md shadow-md hover:bg-sky-700 transition duration-300">
                         See More
                     </button>
                 </div>
