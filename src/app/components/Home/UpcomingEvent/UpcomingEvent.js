@@ -1,0 +1,82 @@
+'use client'
+
+import React from 'react';
+import Image from 'next/image';
+
+const UpcomingEvents = () => {
+    const events = [
+        {
+            title: 'Mountain Hiking',
+            description: 'Join us for an exhilarating mountain hiking experience.',
+            date: 'June 15, 2024',
+            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
+        },
+        {
+            title: 'Beach Cleanup',
+            description: 'Help us keep the beaches clean and enjoy a day by the sea.',
+            date: 'July 10, 2024',
+            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
+        },
+        {
+            title: 'City Marathon',
+            description: 'Participate in our annual city marathon event.',
+            date: 'August 5, 2024',
+            imageUrl: 'https://i.ibb.co/Jpc3b47/image.png',
+        },
+    ];
+
+    return (
+        <div className="bg-gray-50 py-14">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 className="text-3xl font-semibold mb-6 text-center">Upcoming Events</h1>
+                <p className="text-center mb-12 text-base sm:text-lg md:text-xl text-gray-700">See our upcoming events.</p>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div className="col-span-1 md:col-span-2">
+                        <div className="relative w-full h-64 group">
+                            <Image
+                                src={events[0].imageUrl}
+                                alt={events[0].title}
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                            />
+                            <div className="absolute bottom-0 left-0 p-4 text-white w-full">
+                                <h2 className="text-xl font-semibold">{events[0].title}</h2>
+                                <p className="text-sm">{events[0].date}</p>
+                            </div>
+                            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform ">
+                                <h2 className="text-2xl font-semibold mb-2">{events[0].title}</h2>
+                                <p className="mb-2">{events[0].description}</p>
+                                <span>{events[0].date}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {events.slice(1).map((event, index) => (
+                            <div key={index} className="relative w-full h-64 group">
+                                <Image
+                                    src={event.imageUrl}
+                                    alt={event.title}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                                />
+                                <div className="absolute bottom-0 left-0 p-4 text-white w-full">
+                                    <h2 className="text-xl font-semibold">{event.title}</h2>
+                                    <p className="text-sm">{event.date}</p>
+                                </div>
+                                <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform ">
+                                    <h2 className="text-xl font-semibold mb-2">{event.title}</h2>
+                                    <p className="mb-2">{event.description}</p>
+                                    <span>{event.date}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default UpcomingEvents;
