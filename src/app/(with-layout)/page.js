@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Banner from "../components/Home/Banner";
 import LatestStories from "../components/Home/LatestStories/LatestStories";
 import TravelPlan from "../components/Home/TravelPlan/TravelPlan";
@@ -6,23 +7,33 @@ import EventSystem from "../components/Home/EventSystem/EventSystem";
 import CleanSafeAdventures from "../components/Home/CleanSafeAdventures/CleanSafeAdventures";
 import TravelClub from "../components/Home/TravelClub/TravelClub";
 
-export const metadata = {
-    title: 'Trek Explore Travel',
-    description: 'Discover the story behind Hyascka, your trusted partner for digital success. Learn about our journey, mission, and commitment to driving growth for businesses through innovative digital marketing strategies and expert web development services.',
-};
-
-
 export default function Home() {
     return (
-        <main className="">
-            <Banner />
-            <LatestStories />
-            <TravelPlan />
-            <CleanSafeAdventures />
-            <UpcomingEvents />
-            <EventSystem />
-            <TravelClub />
-
-        </main>
+        <>
+            <Head>
+                <title>Trek Explore Travel - Plan Your Adventure Tour Now</title>
+                <meta name="description" content="Welcome to Trek Explore Travel! Discover and plan your next adventure with us. We offer personalized travel packages, expert guides, and unforgettable experiences to the most exciting destinations around the world. Explore, dream, and discover with Trek Explore Travel." />
+                <meta name="keywords" content="Trek Explore Travel, adventure tours, travel packages, personalized travel, expert guides, travel experiences, trekking, travel destinations" />
+                <meta name="author" content="Trek Explore Travel" />
+                <meta property="og:title" content="Trek Explore Travel - Plan Your Adventure Tour Now" />
+                <meta property="og:description" content="Welcome to Trek Explore Travel! Discover and plan your next adventure with us. We offer personalized travel packages, expert guides, and unforgettable experiences to the most exciting destinations around the world. Explore, dream, and discover with Trek Explore Travel." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.trekexploretravel.com/" />
+                <meta property="og:image" content="https://www.trekexploretravel.com/og-image.jpg" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Trek Explore Travel - Plan Your Adventure Tour Now" />
+                <meta name="twitter:description" content="Welcome to Trek Explore Travel! Discover and plan your next adventure with us. We offer personalized travel packages, expert guides, and unforgettable experiences to the most exciting destinations around the world. Explore, dream, and discover with Trek Explore Travel." />
+                <meta name="twitter:image" content="https://www.trekexploretravel.com/twitter-image.jpg" />
+            </Head>
+            <main className="">
+                <Banner />
+                <LatestStories />
+                <TravelPlan />
+                <CleanSafeAdventures />
+                <UpcomingEvents />
+                <EventSystem />
+                <TravelClub />
+            </main>
+        </>
     );
 }
