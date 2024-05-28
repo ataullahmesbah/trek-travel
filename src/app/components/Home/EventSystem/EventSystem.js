@@ -36,7 +36,7 @@ const eventFeatures = [
 
 const EventSystem = () => {
     return (
-        <div className="bg-gray-50 py-14">
+        <div className="bg-gray-50 py-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* <h1 className="text-3xl font-semibold mb-6 text-center">Our Event System</h1>
                 <p className="text-center mb-12 text-base sm:text-lg md:text-xl text-gray-700">We ensure a seamless experience with our top-quality services.</p> */}

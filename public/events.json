@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Mountain Hiking",
+        "description": "Join us for an exhilarating mountain hiking experience.",
+        "date": "June 15, 2024",
+        "imageUrl": "https://i.ibb.co/Jpc3b47/image.png"
+    },
+    {
+        "title": "Beach Cleanup",
+        "description": "Help us keep the beaches clean and enjoy a day by the sea.",
+        "date": "July 10, 2024",
+        "imageUrl": "https://i.ibb.co/Jpc3b47/image.png"
+    },
+    {
+        "title": "City Marathon",
+        "description": "Participate in our annual city marathon event.",
+        "date": "August 5, 2024",
+        "imageUrl": "https://i.ibb.co/Jpc3b47/image.png"
+    }
+]
