@@ -169,7 +169,7 @@ const ContactUs = () => {
                 </div>
                 <div className="mt-12 text-center">
                     <h2 className="text-2xl font-semibold mb-4">Our Contact Information</h2>
-                    <p className="text-base sm:text-lg text-gray-700">Email: contact@yourcompany.com</p>
+                    <p className="text-base sm:text-lg text-gray-700">Email: info@trekexploretravel.com</p>
                     <p className="text-base sm:text-lg text-gray-700">Phone: (123) 456-7890</p>
                     <p className="text-base sm:text-lg text-gray-700">Address: 123 Your Street, Your City, Your State, Your Country</p>
                 </div>

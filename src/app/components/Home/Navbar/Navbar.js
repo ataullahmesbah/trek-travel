@@ -120,7 +120,7 @@ const Navbar = () => {
           <Link href="/blogs" legacyBehavior><a className="block px-4 py-2">Blogs</a></Link>
           <Link href="/about" legacyBehavior><a className="block px-4 py-2">About Us</a></Link>
           <Link href="/contact" legacyBehavior><a className="block px-4 py-2">Contactus</a></Link>
-          <button className="block bg-blue-600 px-4 py-2 rounded hover:bg-blue-500">
+          <button className="block bg-sky-800 hover:bg-sky-900 px-4 py-2 rounded ">
             Log In
           </button>
         </div>
