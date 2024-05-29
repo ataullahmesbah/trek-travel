@@ -58,7 +58,7 @@ const Navbar = () => {
           <Link href="/aboutus" legacyBehavior><a>About Us</a></Link>
           <Link href="/contactus" legacyBehavior><a>Contact</a></Link>
           <div className="relative">
-            <button className="bg-sky-900 px-3 py-2 rounded hover:bg-sky-900 text-white font-medium">
+            <button className="bg-sky-800 hover:bg-sky-900   px-3 py-2 rounded  text-white font-medium">
               Log In
             </button>
             <div className="absolute bg-gray-700 p-2 rounded shadow-lg hidden group-hover:block">

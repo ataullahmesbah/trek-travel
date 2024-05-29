@@ -1,5 +1,7 @@
 'use client';
 
+import emailjs from '@emailjs/browser';
+import React, { useState } from 'react';
 
 export const metadata = {
     title: 'Contact Us - Trek Explore Travel',
@@ -27,9 +29,6 @@ export const metadata = {
     },
 };
 
-import React, { useState } from 'react';
-
-
 const ContactUs = () => {
     const [form, setForm] = useState({
         name: '',
@@ -38,6 +37,7 @@ const ContactUs = () => {
     });
     const [formErrors, setFormErrors] = useState({});
     const [formSubmitted, setFormSubmitted] = useState(false);
+    const [error, setError] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -67,10 +67,24 @@ const ContactUs = () => {
         e.preventDefault();
         const errors = validateForm();
         if (Object.keys(errors).length === 0) {
-            // Handle form submission logic here
-            console.log('Form submitted', form);
-            setFormSubmitted(true);
-            setForm({ name: '', email: '', message: '' });
+            emailjs.send(
+                'service_xsjy4eb',  // Replace with your EmailJS service ID
+                'template_grt5q3s', // Replace with your EmailJS template ID
+                {
+                    to_name: form.name,
+                    from_name: form.email,
+                    message: form.message
+                },
+                '6i4BgDWrdCgrRbvt7' // Replace with your EmailJS user ID
+            ).then((result) => {
+                console.log('Form submitted', result.text);
+                setFormSubmitted(true);
+                setForm({ name: '', email: '', message: '' });
+                setError('');
+            }).catch((error) => {
+                console.error('Error submitting form', error.text);
+                setError('Failed to send message, please try again later.');
+            });
         } else {
             setFormErrors(errors);
         }
@@ -87,6 +101,11 @@ const ContactUs = () => {
                     {formSubmitted && (
                         <div className="mb-6 p-4 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">
                             Your message has been sent successfully!
+                        </div>
+                    )}
+                    {error && (
+                        <div className="mb-6 p-4 text-sm text-red-700 bg-red-100 rounded-lg" role="alert">
+                            {error}
                         </div>
                     )}
                     <form onSubmit={handleSubmit} className="space-y-6">
