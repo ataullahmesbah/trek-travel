@@ -1,5 +1,6 @@
 'use client'
 
+
 import React, { useState } from 'react';
 
 const FAQ = () => {
@@ -28,54 +29,62 @@ const FAQ = () => {
     };
 
     return (
-        <div className="container max-w-7xl mx-auto py-16 px-8">
-            <h2 className="text-3xl font-semibold text-center mb-4">Frequently Asked Questions</h2>
+        <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-12 mb-10">
+            <h2 className="text-4xl font-bold text-center mb-10 text-gray-900">Frequently Asked Questions</h2>
             <div className="accordion">
                 <div className="accordion-item border-b border-gray-200">
-                    <input type="checkbox" id="faq1" className="accordion-trigger hidden" />
-                    <label htmlFor="faq1" className="accordion-title cursor-pointer block py-4 pl-4 pr-12 text-lg font-semibold" onClick={() => toggleAccordion('faq1')}>
-                        What services do you offer?
-                        <span className="float-right">{isOpen1 ? '▲' : '▼'}</span>
-                    </label>
+                    <button
+                        onClick={() => toggleAccordion('faq1')}
+                        className="accordion-title flex justify-between items-center w-full py-4 text-lg font-semibold text-left focus:outline-none"
+                    >
+                        What is Trek Explore Travel?
+                        <span className="text-2xl">{isOpen1 ? '▲' : '▼'}</span>
+                    </button>
                     {isOpen1 && (
-                        <div className="accordion-content px-4 py-2">
-                            <p className="text-gray-700">We offer a wide range of services including guided tours, adventure trips, travel planning, and more. Visit our website to explore our full range of services.</p>
+                        <div className="accordion-content px-4 pb-4">
+                            <p className="text-gray-700">Trek Explore Travel is a premier travel agency specializing in curated travel experiences. We offer personalized travel packages, guided tours, adventure trips, and much more to ensure you have an unforgettable journey.</p>
                         </div>
                     )}
                 </div>
                 <div className="accordion-item border-b border-gray-200">
-                    <input type="checkbox" id="faq2" className="accordion-trigger hidden" />
-                    <label htmlFor="faq2" className="accordion-title cursor-pointer block py-4 pl-4 pr-12 text-lg font-semibold" onClick={() => toggleAccordion('faq2')}>
-                        How can I book a tour?
-                        <span className="float-right">{isOpen2 ? '▲' : '▼'}</span>
-                    </label>
+                    <button
+                        onClick={() => toggleAccordion('faq2')}
+                        className="accordion-title flex justify-between items-center w-full py-4 text-lg font-semibold text-left focus:outline-none"
+                    >
+                        What events do you organize?
+                        <span className="text-2xl">{isOpen2 ? '▲' : '▼'}</span>
+                    </button>
                     {isOpen2 && (
-                        <div className="accordion-content px-4 py-2">
-                            <p className="text-gray-700">Booking a tour is easy! Simply visit our website and navigate to the 'Book Now' section. Follow the instructions to select your preferred tour, date, and payment method.</p>
+                        <div className="accordion-content px-4 pb-4">
+                            <p className="text-gray-700">We organize a variety of events throughout the year, including travel expos, adventure meetups, and cultural immersion experiences. Our events are designed to connect like-minded travelers and provide valuable insights into various destinations.</p>
                         </div>
                     )}
                 </div>
                 <div className="accordion-item border-b border-gray-200">
-                    <input type="checkbox" id="faq3" className="accordion-trigger hidden" />
-                    <label htmlFor="faq3" className="accordion-title cursor-pointer block py-4 pl-4 pr-12 text-lg font-semibold" onClick={() => toggleAccordion('faq3')}>
+                    <button
+                        onClick={() => toggleAccordion('faq3')}
+                        className="accordion-title flex justify-between items-center w-full py-4 text-lg font-semibold text-left focus:outline-none"
+                    >
                         Do you offer customized travel packages?
-                        <span className="float-right">{isOpen3 ? '▲' : '▼'}</span>
-                    </label>
+                        <span className="text-2xl">{isOpen3 ? '▲' : '▼'}</span>
+                    </button>
                     {isOpen3 && (
-                        <div className="accordion-content px-4 py-2">
+                        <div className="accordion-content px-4 pb-4">
                             <p className="text-gray-700">Yes, we specialize in creating personalized travel packages tailored to your preferences and interests. Contact our team to discuss your travel requirements.</p>
                         </div>
                     )}
                 </div>
                 <div className="accordion-item border-b border-gray-200">
-                    <input type="checkbox" id="faq4" className="accordion-trigger hidden" />
-                    <label htmlFor="faq4" className="accordion-title cursor-pointer block py-4 pl-4 pr-12 text-lg font-semibold" onClick={() => toggleAccordion('faq4')}>
-                        What safety measures do you have in place?
-                        <span className="float-right">{isOpen4 ? '▲' : '▼'}</span>
-                    </label>
+                    <button
+                        onClick={() => toggleAccordion('faq4')}
+                        className="accordion-title flex justify-between items-center w-full py-4 text-lg font-semibold text-left focus:outline-none"
+                    >
+                        What gadgets do you offer for travelers?
+                        <span className="text-2xl">{isOpen4 ? '▲' : '▼'}</span>
+                    </button>
                     {isOpen4 && (
-                        <div className="accordion-content px-4 py-2">
-                            <p className="text-gray-700">Ensuring the safety and well-being of our customers is our top priority. We adhere to strict safety protocols, provide experienced guides, and conduct thorough risk assessments for all our tours.</p>
+                        <div className="accordion-content px-4 pb-4">
+                            <p className="text-gray-700">We offer a range of travel gadgets carefully selected to enhance your travel experience. From high-quality backpacks to advanced navigation tools, our products ensure convenience and safety during your travels.</p>
                         </div>
                     )}
                 </div>

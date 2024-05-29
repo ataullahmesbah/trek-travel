@@ -7,6 +7,7 @@ import EventSystem from "../components/Home/EventSystem/EventSystem";
 import CleanSafeAdventures from "../components/Home/CleanSafeAdventures/CleanSafeAdventures";
 import TravelClub from "../components/Home/TravelClub/TravelClub";
 import FAQ from '../components/Home/FAQ/FAQ';
+import TravelBlogs from '../components/TravelBlogs/TravelBlogs';
 
 export default function Home() {
     return (
@@ -35,6 +36,7 @@ export default function Home() {
                 <EventSystem />
                 <TravelClub />
                 <FAQ />
+                <TravelBlogs />
             </main>
         </>
     );
