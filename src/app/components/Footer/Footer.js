@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
 import { FaFacebook, FaYoutube, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
@@ -20,9 +21,11 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul>
                             <li className="mb-2"><a href="#" className="text-gray-200 hover:text-gray-400">Home</a></li>
+                            
                             <li className="mb-2"><a href="#" className="text-gray-200 hover:text-gray-400">About Us</a></li>
-                            <li className="mb-2"><a href="#" className="text-gray-200 hover:text-gray-400">Services</a></li>
-                            <li className="mb-2"><a href="#" className="text-gray-200 hover:text-gray-400">Contact</a></li>
+                            <li className="mb-2"><a href="/privacypolicy" className="text-gray-200 hover:text-gray-400">Privacy Policy</a></li>
+                            
+                            <li className="mb-2"><a href="/terms-conditions" className="text-gray-200 hover:text-gray-400">Terms & Conditions</a></li>
                         </ul>
                     </div>
                     {/* Contact Info */}
