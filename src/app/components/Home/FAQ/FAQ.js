@@ -1,6 +1,7 @@
 'use client'
 
 
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const FAQ = () => {
@@ -29,7 +30,7 @@ const FAQ = () => {
     };
 
     return (
-        <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-12 mb-10">
+        <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-16 mb-10">
             <h2 className="text-4xl font-bold text-center mb-10 text-gray-900">Frequently Asked Questions</h2>
             <div className="accordion">
                 <div className="accordion-item border-b border-gray-200">
@@ -42,7 +43,13 @@ const FAQ = () => {
                     </button>
                     {isOpen1 && (
                         <div className="accordion-content px-4 pb-4">
-                            <p className="text-gray-700">Trek Explore Travel is a premier travel agency specializing in curated travel experiences. We offer personalized travel packages, guided tours, adventure trips, and much more to ensure you have an unforgettable journey.</p>
+                            <p className="text-gray-700">Trek Explore Travel is a premier travel agency specializing in curated travel experiences. We offer personalized travel packages, guided tours, adventure trips, and much more to ensure you have an unforgettable journey..
+
+                                <Link href='/aboutus' legacyBehavior>
+                                    <a className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">more</a>
+                                </Link>
+
+                            </p>
                         </div>
                     )}
                 </div>

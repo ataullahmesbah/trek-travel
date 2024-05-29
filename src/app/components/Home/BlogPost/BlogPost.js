@@ -1,35 +1,14 @@
-'use client'
 
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+
 import Image from 'next/image';
+import useBlogs from '../../hooks/useBlogs';
 
 const BlogPost = () => {
-    const router = useRouter();
-    const { id } = router.query;
-    const [blog, setBlog] = useState(null);
+    const { id } = useParams();
+    const [blogs] = useBlogs();
 
-    useEffect(() => {
-        const fetchBlog = async () => {
-            if (!id) return;
 
-            try {
-                const response = await fetch('/blog.json');
-                const data = await response.json();
-                const blogPost = data.find((blog) => blog.id === parseInt(id));
-                setBlog(blogPost);
-            } catch (error) {
-                console.error('Error fetching blog data:', error);
-            }
-        };
-
-        fetchBlog();
-    }, [id]);
-
-    if (!blog) {
-        return <p>Loading...</p>;
-    }
-
+    const blog = blogs.find((blog) => blog._id === id);
     return (
         <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>

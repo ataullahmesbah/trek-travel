@@ -20,6 +20,7 @@ const TravelBlogs = () => {
 
         fetchBlogs();
     }, []);
+
     return (
         <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div className="relative h-64 w-full mb-12">
@@ -37,14 +38,14 @@ const TravelBlogs = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {blogs.map((blog) => (
-                    <div key={blog.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div key={blog._id} className="bg-white rounded-lg overflow-hidden border-l-8 border-sky-900 hover:border-sky-800 shadow-md hover:shadow-xl">
                         <Image
                             src={blog.image}
                             width={400}
                             height={250}
                             objectFit="cover"
                             alt={blog.title}
-                            className="w-full h-48 object-cover"
+                            className="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105"
                         />
                         <div className="p-6">
                             <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
@@ -52,8 +53,8 @@ const TravelBlogs = () => {
                             <p className="text-gray-700 mb-4">
                                 {blog.description.slice(0, 40)}...
                             </p>
-                            <Link href={`/blog/${blog.id}`} legacyBehavior>
-                                <a className="text-sky-900 font-semibold hover:underline">Read More</a>
+                            <Link href={`/blog/${blog._id}`} legacyBehavior>
+                                <a className="text-sky-900 bottom-0 left-0 font-semibold hover:underline">Read More</a>
                             </Link>
                         </div>
                     </div>

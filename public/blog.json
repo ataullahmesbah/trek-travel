@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "_id": 1,
         "title": "Exploring the Wonders of the Amazon Rainforest",
         "date": "2024-05-10",
         "image": "https://i.ibb.co/Jpc3b47/image.png",
@@ -8,7 +8,7 @@
         "content": "Full content of the blog post goes here. This can be a detailed description or article content."
     },
     {
-        "id": 2,
+        "_id": 2,
         "title": "Top 10 Travel Gadgets for Your Next Adventure",
         "date": "2024-04-22",
         "image": "https://i.ibb.co/Jpc3b47/image.png",
@@ -16,7 +16,7 @@
         "content": "Full content of the blog post goes here. This can be a detailed description or article content."
     },
     {
-        "id": 3,
+        "_id": 3,
         "title": "How to Plan a Sustainable Travel Itinerary",
         "date": "2024-03-15",
         "image": "https://i.ibb.co/Jpc3b47/image.png",
