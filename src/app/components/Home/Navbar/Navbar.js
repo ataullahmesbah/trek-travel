@@ -62,7 +62,7 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <div
+          {/* <div
             className="relative"
             onMouseEnter={() => handleMouseEnter('gadgets')}
             onMouseLeave={() => handleMouseLeave('gadgets')}
@@ -82,7 +82,8 @@ const Navbar = () => {
                 <Link href="/gadgets/mat" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Mat</a></Link>
               </div>
             )}
-          </div>
+          </div> */}
+          <Link href="/travel-gadgets" legacyBehavior><a className="block px-4 py-2">Travel Gadgets</a></Link>
           <Link href="/trip-album" legacyBehavior><a>Trip Album</a></Link>
           <Link href="/travelstories" legacyBehavior><a>Travel Stories</a></Link>
           <Link href="/blogs" legacyBehavior><a>Blogs</a></Link>
@@ -122,7 +123,7 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <div className="relative">
+          {/* <div className="relative">
             <button
               onClick={() => handleSubMenuToggle('gadgets')}
               className="flex items-center px-4 py-2 focus:outline-none"
@@ -138,7 +139,8 @@ const Navbar = () => {
                 <Link href="/gadgets/mat" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Mat</a></Link>
               </div>
             )}
-          </div>
+          </div> */}
+          <Link href="/travel-gadgets" legacyBehavior><a className="block px-4 py-2">Travel Gadgets</a></Link>
           <Link href="/trip-album" legacyBehavior><a className="block px-4 py-2">Trip Album</a></Link>
           <Link href="/travelstories" legacyBehavior><a className="block px-4 py-2">Travel Stories</a></Link>
           <Link href="/blogs" legacyBehavior><a className="block px-4 py-2">Blogs</a></Link>
