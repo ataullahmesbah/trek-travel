@@ -13,7 +13,7 @@ const CleanSafeAdventures = () => {
     return (
         <div className="bg-gray-50 py-16 md:py-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold mb-6 sm:mb-8 lg:mb-10 text-sky-900">
+                <h1 className="title">
                     Clean & Safe Adventures
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-12 text-gray-700 lg:px-4">

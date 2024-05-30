@@ -1,20 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaAccessibleIcon, FaBackward, FaForward } from "react-icons/fa";
-
+import { FaAccessibleIcon, FaBackward, FaForward, FaWordpressSimple } from "react-icons/fa";
 
 export const metadata = {
-    title: 'Login | Hyascka',
-    description: 'Log in to access your account on Hyascka. Enter your credentials to securely sign in and manage your account.',
+    title: 'Sign Up | Trek Explore Travel',
+    description: 'Create a new account on Trek Explore Travel. Sign up to access exclusive features and personalized content. Join us and get started on your next adventure!',
 };
 
-const LogIn = () => {
+const SignUpPage = () => {
     return (
         <div className="container mx-auto py-20">
 
             <div className=" font-semibold flex justify-between items-center p-4">
                 <Link href='/' className="flex items-center gap-4" ><FaBackward /> <h3>Back to Home</h3></Link>
-                <Link href='/signup' className="flex items-center gap-4"><h3>Create an Account</h3> <FaForward /> </Link>
+                <Link href='/login' className="flex items-center gap-4"><h3>Already have an Account</h3> <FaForward /></Link>
 
             </div>
             {/* img optimize */}
@@ -23,16 +22,43 @@ const LogIn = () => {
                     <FaAccessibleIcon />
                 </div>
             </div>
-            {/* img optimize */}
 
 
-            <h2 className="text-xl font-semibold text-center">Log into Trek Explore Travel</h2>
+            <h2 className="text-xl font-semibold text-center">Sign Up into Trek Explore Travel</h2>
 
 
             {/* Log section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-between items-center mx-auto mt-8 p-4 lg:w-3/4">
 
                 <div className="">
+
+                    <div className="flex gap-2 items-center">
+                        {/* First Name Input */}
+                        <div className="mb-4">
+                            <label htmlFor="name" className="block text-gray-600 mb-2">First Name</label>
+                            <input
+                                type="name"
+                                id="name"
+                                name="name"
+                                placeholder="Your First Name"
+                                className="w-full px-4 py-2 border rounded focus:outline-none focus:border-gray-500 bg-gray-100"
+                            />
+                        </div>
+                        {/* Last Name Input */}
+
+                        <div className="mb-4">
+                            <label htmlFor="name" className="block text-gray-600 mb-2">Last Name</label>
+                            <input
+                                type="name"
+                                id="name"
+                                name="name"
+                                placeholder="Your Last Name"
+                                className="w-full px-4 py-2 border rounded focus:outline-none focus:border-gray-500 bg-gray-100"
+                            />
+                        </div>
+
+                    </div>
+
 
                     {/* Email Input */}
                     <div className="mb-4">
@@ -57,17 +83,27 @@ const LogIn = () => {
                             className="w-full px-4 py-2 border rounded focus:outline-none focus:border-gray-500 bg-gray-100"
                         />
                     </div>
+                    {/* Confirm Password Input */}
+                    <div className="mb-6">
+                        <label htmlFor="password" className="block text-gray-600 mb-2 ">Confirm Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Confirm Password"
+                            className="w-full px-4 py-2 border rounded focus:outline-none focus:border-gray-500 bg-gray-100"
+                        />
+                    </div>
 
                     {/* Submit Button */}
                     <p
                         type="submit"
                         className="bg-sky-800 text-center text-white px-4 py-2 rounded hover:bg-sky-900 focus:outline-none focus:shadow-outline-blue"
                     >
-                        Log In
+                        Sign Up
                     </p>
 
                 </div>
-
 
                 {/* Or */}
 
@@ -76,8 +112,6 @@ const LogIn = () => {
                     <div className="text-gray-500">OR</div>
                     <div className="border-l items-center justify-center border-gray-600 h-10"></div>
                 </div>
-
-
 
                 {/* Social Login Section */}
                 <div className="space-y-3">
@@ -95,12 +129,7 @@ const LogIn = () => {
                     </div>
                 </div>
 
-
-
-
-
             </div>
-
 
             {/* Forgotten Password */}
             <Link href='/'> <p className="text-center mt-16  uppercase font-medium">Forgotten password?</p></Link>
@@ -110,6 +139,7 @@ const LogIn = () => {
                 <Link href='/terms-conditions'>
                     <p>Terms & Privacy</p>
                 </Link>
+
             </div>
 
 
@@ -119,4 +149,4 @@ const LogIn = () => {
     );
 };
 
-export default LogIn;
+export default SignUpPage;

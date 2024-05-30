@@ -4,22 +4,34 @@
 
 
 
-@layer utilities {
-    .loader {
-      border-top-color: #3490dc; /* Customize the color as needed */
-      @apply animate-spin;
-    }
-  
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-  
-    .animate-spin {
-      animation: spin 1s linear infinite;
-    }
+/* Define a global class for titles */
+.title {
+  font-size: 2rem;
+  /* Default font size */
+  margin-bottom: 1.5rem;
+  /* Bottom margin */
+  text-align: center;
+  /* Center-align text */
+}
+
+/* Responsive font sizes */
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.5rem;
+    /* Increase font size on small screens and up */
   }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+    /* Increase font size on medium screens and up */
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+    /* Increase font size on large screens and up */
+  }
+}
