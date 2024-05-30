@@ -3,9 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Loader from '../loader/loader';
 
 const TravelBlogs = () => {
     const [blogs, setBlogs] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchBlogs = async () => {
@@ -15,13 +17,22 @@ const TravelBlogs = () => {
                 setBlogs(data);
             } catch (error) {
                 console.error('Error fetching blog data:', error);
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchBlogs();
     }, []);
 
+    if (loading) {
+        return <Loader />;
+    }
+
+
     return (
+
+
         <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             {/* <div className="relative h-64 w-full  ">
                 <Image
@@ -66,6 +77,7 @@ const TravelBlogs = () => {
                 ))}
             </div>
         </div>
+
     );
 };
 

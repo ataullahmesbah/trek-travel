@@ -38,5 +38,21 @@
         "image": "https://i.ibb.co/Jpc3b47/image.png",
         "description": "Planning a sustainable travel itinerary can be challenging. Here are some tips and tricks to help you minimize your carbon footprint...",
         "content": "Full content of the blog post goes here. This can be a detailed description or article content."
+    },
+    {
+        "_id": 3,
+        "title": "How to Plan a Sustainable Travel Itinerary",
+        "date": "2024-03-15",
+        "image": "https://i.ibb.co/Jpc3b47/image.png",
+        "description": "Planning a sustainable travel itinerary can be challenging. Here are some tips and tricks to help you minimize your carbon footprint...",
+        "content": "Full content of the blog post goes here. This can be a detailed description or article content."
+    },
+    {
+        "_id": 3,
+        "title": "How to Plan a Sustainable Travel Itinerary",
+        "date": "2024-03-15",
+        "image": "https://i.ibb.co/Jpc3b47/image.png",
+        "description": "Planning a sustainable travel itinerary can be challenging. Here are some tips and tricks to help you minimize your carbon footprint...",
+        "content": "Full content of the blog post goes here. This can be a detailed description or article content."
     }
 ]
