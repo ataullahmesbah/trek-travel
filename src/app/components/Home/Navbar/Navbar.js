@@ -54,7 +54,7 @@ const Navbar = () => {
               {subMenuOpen.destination ? <FaChevronUp className="ml-1" /> : <FaChevronDown className="ml-1" />}
             </button>
             {subMenuOpen.destination && (
-              <div className="absolute left-0 bg-sky-800 text-white p-4 rounded shadow-lg mt-2 z-40">
+              <div className="absolute left-0 bg-sky-800 shadow-2xl bg-opacity-60   text-white p-4 rounded mt-1 z-40">
                 <Link href="/destination/bangladesh" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Bangladesh</a></Link>
                 <Link href="/destination/nepal" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Nepal</a></Link>
                 <Link href="/destination/india" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">India</a></Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
               {subMenuOpen.gadgets ? <FaChevronUp className="ml-1" /> : <FaChevronDown className="ml-1" />}
             </button>
             {subMenuOpen.gadgets && (
-              <div className="absolute left-0 bg-sky-800 text-white p-4 rounded shadow-lg mt-2 z-40 w-48">
+              <div className="absolute left-0 bg-sky-800 text-white p-4 rounded shadow-2xl bg-opacity-60 mt-2 z-40 w-48">
                 <Link href="/gadgets/accessories" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Travel Accessories</a></Link>
                 <Link href="/gadgets/travel-gadget" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Travel Gadget</a></Link>
                 <Link href="/gadgets/bags" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Sleeping Bag</a></Link>

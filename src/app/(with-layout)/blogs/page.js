@@ -1,3 +1,4 @@
+import BlogAllInfo from "@/app/components/BlogAllInfo/BlogAllInfo";
 import TravelBlogs from "@/app/components/TravelBlogs/TravelBlogs";
 import Image from "next/image";
 
@@ -23,10 +24,9 @@ const Blogs = () => {
                 </div>
             </div>
 
-            <h1 className="text-black text-3xl text-center py-12 font-semibold">Blogs</h1>
 
             <div className="">
-                <TravelBlogs />
+                <BlogAllInfo />
             </div>
         </main>
     );

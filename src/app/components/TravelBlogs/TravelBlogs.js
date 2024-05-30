@@ -25,6 +25,8 @@ const TravelBlogs = () => {
         fetchBlogs();
     }, []);
 
+    const latestBlogs = blogs.slice(0, 3);
+
     if (loading) {
         return <Loader />;
     }
@@ -34,18 +36,6 @@ const TravelBlogs = () => {
 
 
         <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            {/* <div className="relative h-64 w-full  ">
-                <Image
-                    src="/images/blog-banner.jpg"
-                    layout="fill"
-                    objectFit="cover"
-                    alt="Blog Banner"
-                    className="rounded-lg"
-                />
-                <div className="absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
-                    <h1 className="text-white text-4xl font-bold">Our Blog</h1>
-                </div>
-            </div> */}
 
             <h1 className="text-3xl font-semibold mb-6 text-center">Featured Blog Posts</h1>
             <p className="text-center mb-12 text-base sm:text-lg md:text-xl text-gray-700">A small sampling of expert advice and insight from Trek Explore Travel blog.</p>
@@ -53,8 +43,8 @@ const TravelBlogs = () => {
 
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {blogs.map((blog) => (
-                    <div key={blog._id} className="bg-white rounded-lg overflow-hidden border-l-8 border-b-4 border-b-sky-500 border-sky-900 hover:border-sky-800 shadow-md hover:shadow-xl">
+                {latestBlogs.map((blog, index) => (
+                    <div key={index} className="bg-white rounded-lg overflow-hidden border-l-8 border-b-4 border-b-sky-500 border-sky-900 hover:border-sky-800 shadow-md hover:shadow-xl">
                         <Image
                             src={blog.image}
                             width={400}
@@ -76,6 +66,15 @@ const TravelBlogs = () => {
                     </div>
                 ))}
             </div>
+
+            <div className="text-center justify-center pt-12">
+                <Link href='/blogs' >
+                    <button className="bg-sky-900 text-white px-6 py-3 sm:py-3 sm:px-8 font-medium rounded-md shadow-md hover:bg-sky-700 transition duration-300">
+                        More Blogs
+                    </button>
+                </Link>
+            </div>
+
         </div>
 
     );
