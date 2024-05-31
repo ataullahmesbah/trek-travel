@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Gadget 1",
+        "category": "All Gadgets",
+        "description": "Description for Gadget 1",
+        "image": "https://i.ibb.co/KcZs5KC/IMG-4201.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Bag 1",
+        "category": "Bags",
+        "description": "Description for Bag 1",
+        "image": "https://i.ibb.co/y4xbHmS/image.png"
+    },
+    {
+        "id": 3,
+        "name": "Mat 1",
+        "category": "Mats",
+        "description": "Description for Mat 1",
+        "image": "https://i.ibb.co/HX3qkWq/image.png"
+    },
+    {
+        "id": 4,
+        "name": "Travel Accessory 1",
+        "category": "Travel Accessories",
+        "description": "Description for Travel Accessory 1",
+        "image": "https://i.ibb.co/Yt00q0T/IMG-20231218-105615.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Gadget 2",
+        "category": "All Gadgets",
+        "description": "Description for Gadget 2",
+        "image": "https://via.placeholder.com/150"
+    }
+]
