@@ -27,9 +27,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { FaUser, FaUserAltSlash, FaUserEdit } from 'react-icons/fa';
 
-
-// const categories = ["All Gadgets", "Bags", "Mats", "Travel Accessories", "More"];
 
 const GadgetsNavbar = () => {
 
@@ -45,7 +44,7 @@ const GadgetsNavbar = () => {
         <div>
 
             {/* First AppBar  Start */}
-            <AppBar position="static" sx={{ justifyContent: 'space-between' }} className='bg-sky-950 shadow-md border shadow-slate-50 '>
+            <AppBar position="static" sx={{ backgroundColor: 'rgb(8 47 73)', justifyContent: 'space-between' }} className=' shadow-md border shadow-slate-50 '>
                 <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'wrap' }} >
                     <Typography variant="h6" component="div" sx={{ display: { xs: 'block' } }}>
                         Trek Explore Travel
@@ -89,7 +88,9 @@ const GadgetsNavbar = () => {
 
 
                         <Link href='/login'>
-                            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+
+                                <FaUserEdit className='w-6 h-6 text-gray-300'/>
                                 <Typography variant="body1" component="div">
                                     Account Sign In
                                 </Typography>

@@ -12,7 +12,8 @@ import {
     ListItemText,
     Container,
     Grid,
-    
+    Box,
+
 
 
 } from '@mui/material';
@@ -21,6 +22,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import gadgetsData from '/public/gadgets.json'; // Adjust the path accordingly
 import ProductList from '../ProductList/ProductList';
 import GadgetsNavbar from '../../GadgetsNavbar/GadgetsNavbar';
+import ContainerPage from '@/app/container/page';
 
 
 const categories = ["All Gadgets", "Bags", "Mats", "Travel Accessories", "More"];
@@ -52,15 +54,40 @@ export default function GadgetsHome() {
             <GadgetsNavbar />
 
             {/* Second AppBar  Start */}
-            <AppBar position="static" className='bg-sky-900'>
-                <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6">
-                        All Gadgets
-                    </Typography>
-                </Toolbar>
+            <AppBar position="static" sx={{ backgroundColor: 'rgb(12 74 110)' }}>
+                <ContainerPage>
+                    <Toolbar sx={{ display: 'flex', justifyContent: 'start', gap: 2 }}>
+                        <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
+                            <MenuIcon />
+                        </IconButton>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
+                                All Categories
+                            </Typography>
+                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
+                                Electronic Accessories
+                            </Typography>
+                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
+                                Travel Tech
+                            </Typography>
+                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
+                                Luggage & Organization
+                            </Typography>
+                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
+                                Photography Gear
+                            </Typography>
+                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
+                                Comfort Accessories
+                            </Typography>
+                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
+                                Outdoor Gear
+                            </Typography>
+                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
+                                Help Center
+                            </Typography>
+                        </Box>
+                    </Toolbar>
+                </ContainerPage>
             </AppBar>
 
             {/* Second AppBar  End */}
