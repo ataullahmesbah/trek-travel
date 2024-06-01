@@ -62,27 +62,8 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          {/* <div
-            className="relative"
-            onMouseEnter={() => handleMouseEnter('gadgets')}
-            onMouseLeave={() => handleMouseLeave('gadgets')}
-          >
-            <button
-              className="flex items-center focus:outline-none"
-              onClick={() => handleSubMenuToggle('gadgets')}
-            >
-              Tour Gadgets
-              {subMenuOpen.gadgets ? <FaChevronUp className="ml-1" /> : <FaChevronDown className="ml-1" />}
-            </button>
-            {subMenuOpen.gadgets && (
-              <div className="absolute left-0 bg-sky-800 text-white p-4 rounded shadow-2xl bg-opacity-60 mt-2 z-40 w-48">
-                <Link href="/gadgets/accessories" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Travel Accessories</a></Link>
-                <Link href="/gadgets/travel-gadget" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Travel Gadget</a></Link>
-                <Link href="/gadgets/bags" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Sleeping Bag</a></Link>
-                <Link href="/gadgets/mat" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Mat</a></Link>
-              </div>
-            )}
-          </div> */}
+
+
           <Link href="/travel-gadgets" legacyBehavior><a className="block px-4 py-2">Travel Gadgets</a></Link>
           <Link href="/trip-album" legacyBehavior><a>Trip Album</a></Link>
           <Link href="/travelstories" legacyBehavior><a>Travel Stories</a></Link>

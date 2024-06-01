@@ -19,38 +19,26 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import gadgetsData from '/public/gadgets.json'; // Adjust the path accordingly
-import ProductList from '../ProductList/ProductList';
 
 
-const categories = ["All Gadgets", "Bags", "Mats", "Travel Accessories", "More"];
+// const categories = ["All Gadgets", "Bags", "Mats", "Travel Accessories", "More"];
 
-export default function HomePage() {
-    const [drawerOpen, setDrawerOpen] = useState(false);
+const GadgetsNavbar = () => {
+
+
     const [menuOpen, setMenuOpen] = useState(false);
-    const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-
-    const toggleDrawer = (open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
-        setDrawerOpen(open);
-    };
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const handleCategoryClick = (category) => {
-        setSelectedCategory(category);
-        setDrawerOpen(false);
-    };
 
     return (
         <div>
-            {/* First AppBar */}
+
+            {/* First AppBar  Start */}
             <AppBar position="static" sx={{ justifyContent: 'space-between' }} className='bg-sky-950 shadow-md border shadow-slate-50 '>
                 <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'wrap' }} >
                     <Typography variant="h6" component="div" sx={{ display: { xs: 'block' } }}>
@@ -151,37 +139,13 @@ export default function HomePage() {
                 </Drawer>
             </AppBar>
 
-            {/* Second AppBar */}
-            <AppBar position="static" className='bg-sky-900'>
-                <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6">
-                        Categories
-                    </Typography>
-                </Toolbar>
-            </AppBar>
+            {/* First AppBar End */}
 
-            {/* Drawer */}
-            <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-                <List>
-                    {categories.map((text, index) => (
-                        <ListItem button key={text} onClick={() => handleCategoryClick(text)}>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
-            </Drawer>
 
-            {/* Main Content */}
-            <Container maxWidth="lg">
-                <Grid container spacing={3} style={{ marginTop: '20px' }}>
-                    <Grid item xs={12}>
-                        <ProductList category={selectedCategory} products={gadgetsData} />
-                    </Grid>
-                </Grid>
-            </Container>
         </div>
+
     );
-}
+
+};
+
+export default GadgetsNavbar;

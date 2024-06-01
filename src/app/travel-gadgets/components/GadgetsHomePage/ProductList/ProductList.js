@@ -1,6 +1,5 @@
 
 
-
 import { Grid, Card, CardContent, CardMedia, Typography } from '@mui/material';
 
 const ProductList = ({ category, products }) => {

@@ -1,17 +1,17 @@
 import Link from "next/link";
-import HomePage from "./components/Home/HomePage/HomePage";
+import GadgetsHome from "./components/GadgetsHomePage/GadgetsHome/GadgetsHome";
 
 
 const TravelGadgets = () => {
     return (
         <div>
-        
+
             <Link href='/' >
                 Home
             </Link>
-        
 
-            <HomePage />
+            <GadgetsHome />
+
         </div>
     );
 };
