@@ -12,6 +12,7 @@ import {
     ListItemText,
     Container,
     Grid,
+    
 
 
 } from '@mui/material';
@@ -38,20 +39,13 @@ export default function GadgetsHome() {
         setDrawerOpen(open);
     };
 
-
-
-
-
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
         setDrawerOpen(false);
     };
 
-
     return (
         <div>
-
-
 
             {/* E-commerce Navbar */}
 
@@ -64,15 +58,12 @@ export default function GadgetsHome() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6">
-                        Categories
+                        All Gadgets
                     </Typography>
                 </Toolbar>
             </AppBar>
 
             {/* Second AppBar  End */}
-
-
-
 
 
             {/* Drawer */}

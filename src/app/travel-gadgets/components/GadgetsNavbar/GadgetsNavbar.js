@@ -1,6 +1,10 @@
 'use client';
 
+
+
 import React, { useState } from 'react';
+import Link from 'next/link'
+
 import {
     AppBar,
     Toolbar,
@@ -14,7 +18,9 @@ import {
     ListItem,
     ListItemText,
     Container,
-    Grid
+    Grid,
+
+
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
@@ -76,11 +82,21 @@ const GadgetsNavbar = () => {
                     </Box>
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 2 }}>
-                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                            <Typography variant="body1" component="div">
-                                Account Sign In
-                            </Typography>
-                        </Box>
+
+                        <Link href='/'>
+                            Home
+                        </Link>
+
+
+                        <Link href='/login'>
+                            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Typography variant="body1" component="div">
+                                    Account Sign In
+                                </Typography>
+                            </Box>
+                        </Link>
+
+
                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                             <Typography variant="body1" component="div">
                                 Return & Orders
@@ -118,12 +134,20 @@ const GadgetsNavbar = () => {
                                 </IconButton>
                             </Box>
                         </ListItem>
-                        <ListItem>
-                            <IconButton aria-label="account">
+
+
+
+                        <Link href="/">
+                            Home
+                        </Link>
+
+                        <Link href="/login" passHref>
+                            <IconButton component="a" aria-label="account">
                                 <AccountCircleIcon />
                                 <Typography variant="body1" sx={{ marginLeft: 1 }}>Account Sign In</Typography>
                             </IconButton>
-                        </ListItem>
+                        </Link>
+
                         <ListItem>
                             <Typography variant="body1">Return & Orders</Typography>
                         </ListItem>
