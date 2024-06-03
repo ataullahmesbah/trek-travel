@@ -4,35 +4,34 @@ import React, { useState } from 'react';
 import {
     AppBar,
     Toolbar,
-    Typography,
     IconButton,
     Drawer,
-    List,
-    ListItem,
-    ListItemText,
     Container,
     Grid,
     Box,
-
-
-
+    useMediaQuery,
+    Typography,
+    List,
+    ListItem,
+    ListItemText,
 } from '@mui/material';
-
 import MenuIcon from '@mui/icons-material/Menu';
 import gadgetsData from '/public/gadgets.json'; // Adjust the path accordingly
-import ProductList from '../ProductList/ProductList';
+
 import GadgetsNavbar from '../../GadgetsNavbar/GadgetsNavbar';
 import ContainerPage from '@/app/container/page';
 
+import { useTheme } from '@mui/material/styles';
+import CategoryList from '../../CategoryList/CategoryList';
+import ProductList from '../ProductList/ProductList';
 
-const categories = ["All Gadgets", "Bags", "Mats", "Travel Accessories", "More"];
+const categories = ["All Gadgets", "Backpack", "Apparel", "Climbing Gear", "Hammock", "Sleeping Bag", "Electronics", "Tents", "Water Sports", "Cooking", "Tools & Kit", "Running", "Others Products"];
 
-
-export default function GadgetsHome() {
-
+const GadgetsHome = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
-    const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-
+    const [selectedCategory, setSelectedCategory] = useState('All Gadgets');
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     const toggleDrawer = (open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -48,68 +47,43 @@ export default function GadgetsHome() {
 
     return (
         <div>
-
             {/* E-commerce Navbar */}
-
             <GadgetsNavbar />
 
-            {/* Second AppBar  Start */}
+            {/* Second AppBar Start */}
             <AppBar position="static" sx={{ backgroundColor: 'rgb(12 74 110)' }}>
                 <ContainerPage>
-                    <Toolbar sx={{ display: 'flex', justifyContent: 'start', gap: 2 }}>
+                    <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', gap: 2 }}>
                         <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
                             <MenuIcon />
                         </IconButton>
-                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
-                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
-                                All Categories
-                            </Typography>
-                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
-                                Electronic Accessories
-                            </Typography>
-                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
-                                Travel Tech
-                            </Typography>
-                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
-                                Luggage & Organization
-                            </Typography>
-                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
-                                Photography Gear
-                            </Typography>
-                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
-                                Comfort Accessories
-                            </Typography>
-                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
-                                Outdoor Gear
-                            </Typography>
-                            <Typography variant="body2" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}>
-                                Help Center
-                            </Typography>
-                        </Box>
+                        {!isMobile && (
+                            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+                                <CategoryList categories={categories} handleCategoryClick={handleCategoryClick} />
+                            </Box>
+                        )}
                     </Toolbar>
                 </ContainerPage>
             </AppBar>
-
-            {/* Second AppBar  End */}
-
+            {/* Second AppBar End */}
 
             {/* Drawer */}
-            <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+            <Drawer anchor="left"  open={drawerOpen} onClose={toggleDrawer(false)}>
                 <List>
-                    {categories.map((text, index) => (
-                        <ListItem button key={text} onClick={() => handleCategoryClick(text)}>
-                            <ListItemText primary={text} />
+                    {categories.map((category) => (
+                        <ListItem button sx={{paddingRight: '50px', marginTop: '20px'}} key={category} onClick={() => handleCategoryClick(category)}>
+                            <ListItemText primary={category} />
                         </ListItem>
                     ))}
                 </List>
             </Drawer>
+            {/* Drawer End */}
 
-
-            {/* Drawer  end */}
-
-
-
-
+            {/* Drawer */}
+            {/* <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+                
+            </Drawer> */}
+            {/* Drawer End */}
 
 
 
@@ -123,4 +97,6 @@ export default function GadgetsHome() {
             </Container>
         </div>
     );
-}
+};
+
+export default GadgetsHome;

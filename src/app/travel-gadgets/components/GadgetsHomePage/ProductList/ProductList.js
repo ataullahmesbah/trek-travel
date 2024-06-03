@@ -1,5 +1,5 @@
-
-
+// components/ProductList.js
+import React from 'react';
 import { Grid, Card, CardContent, CardMedia, Typography } from '@mui/material';
 
 const ProductList = ({ category, products }) => {
