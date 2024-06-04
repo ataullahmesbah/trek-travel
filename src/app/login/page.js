@@ -3,10 +3,38 @@ import Link from "next/link";
 import { FaAccessibleIcon, FaBackward, FaForward } from "react-icons/fa";
 
 
+
+
 export const metadata = {
-    title: 'Login | Hyascka',
-    description: 'Log in to access your account on Hyascka. Enter your credentials to securely sign in and manage your account.',
+    title: 'Login | Treak Explore Travel',
+    description: 'Log in to access your account on Treak Explore Travel. Enter your credentials to securely sign in and manage your account.',
 };
+
+const TrekExploreTravelIcon = () => (
+    <svg
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <circle cx="30" cy="30" r="28" stroke="black" strokeWidth="4" fill="white" />
+        <path 
+            d="M 15 45 L 30 25 L 45 45 Z" 
+            fill="sky"
+        />
+        <circle cx="40" cy="20" r="5" stroke="black" strokeWidth="2" fill="white" />
+        <path 
+            d="M 25 40 L 35 30 L 45 40 L 35 35 Z" 
+            fill="black"
+        />
+        <line x1="20" y1="50" x2="40" y2="50" stroke="black" strokeWidth="2" />
+    </svg>
+);
+
+
+
+
 
 const LogIn = () => {
     return (
@@ -20,7 +48,9 @@ const LogIn = () => {
             {/* img optimize */}
             <div className="flex justify-center items-center text-center">
                 <div className="mx-auto m-4">
-                    <FaAccessibleIcon />
+                    {/* <FaAccessibleIcon /> */}
+
+                    <TrekExploreTravelIcon />
                 </div>
             </div>
             {/* img optimize */}

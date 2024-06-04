@@ -29,6 +29,9 @@ const AdventureStories = () => {
                     alt="Banner"
                     layout="fill"
                     objectFit="cover"
+                    placeholder="blur"
+                    quality={100}
+                    blurDataURL="data:..."
                     className="w-full h-full"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
@@ -52,7 +55,9 @@ const AdventureStories = () => {
                                 alt={story.title}
                                 width={600}
                                 height={400}
-                               
+                                placeholder="blur"
+                                quality={100}
+                                blurDataURL={story.imageUrl}
                                 className="w-full h-48 object-cover"
                             />
                             <div className="p-4">
@@ -85,6 +90,9 @@ const AdventureStories = () => {
                                 alt={story.title}
                                 width={600}
                                 height={400}
+                                placeholder="blur"
+                                blurDataURL={story.imageUrl}
+                                quality={100}
                                 className="w-full h-48 object-cover"
                             />
                             <div className="p-4">

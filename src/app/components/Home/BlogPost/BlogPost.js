@@ -19,6 +19,9 @@ const BlogPost = () => {
                     layout="fill"
                     objectFit="cover"
                     alt={blog.title}
+                    placeholder="blur"
+                    quality={100}
+                    blurDataURL={blog.image}
                     className="rounded-lg"
                 />
             </div>

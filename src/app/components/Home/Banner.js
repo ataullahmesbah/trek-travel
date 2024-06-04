@@ -51,6 +51,9 @@ const Banner = () => {
                             alt={banner.title}
                             layout="fill"
                             objectFit="cover"
+                            placeholder="blur"
+                            quality={100}
+                            blurDataURL={banner.imageUrl}
                             className="w-full h-full"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">

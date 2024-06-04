@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+html,
+body,
+:root {
+  height: 100%;
+}
+
 
 /* Define a global class for titles */
 .title {

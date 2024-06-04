@@ -43,6 +43,7 @@ const LatestStories = () => {
                                     width={600}
                                     height={400}
                                     placeholder="blur"
+                                    quality={100}
                                     blurDataURL={story.imageUrl}
                                     className="w-full h-48 object-cover"
                                 />

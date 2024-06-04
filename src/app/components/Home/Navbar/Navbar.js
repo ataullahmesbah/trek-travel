@@ -54,8 +54,8 @@ const Navbar = () => {
               {subMenuOpen.destination ? <FaChevronUp className="ml-1" /> : <FaChevronDown className="ml-1" />}
             </button>
             {subMenuOpen.destination && (
-              <div className="absolute left-0 bg-sky-800 shadow-2xl bg-opacity-60   text-white p-4 rounded mt-1 z-40">
-                <Link href="/destination/bangladesh" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Bangladesh</a></Link>
+              <div className="absolute left-0 bg-sky-800 shadow-2xl bg-opacity-60  w-full text-white p-4 rounded mt-1 z-40">
+                <Link href="/destination/bangladesh" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Odekha Banlar Khoje</a></Link>
                 <Link href="/destination/nepal" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Nepal</a></Link>
                 <Link href="/destination/india" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">India</a></Link>
                 <Link href="/destination/maldives" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Maldives</a></Link>
@@ -97,7 +97,7 @@ const Navbar = () => {
             </button>
             {subMenuOpen.destination && (
               <div className="bg-sky-800 text-white p-2 rounded shadow-lg">
-                <Link href="/destination/bangladesh" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Bangladesh</a></Link>
+                <Link href="/destination/bangladesh" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Odekha Banlar Khoje</a></Link>
                 <Link href="/destination/nepal" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Nepal</a></Link>
                 <Link href="/destination/india" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">India</a></Link>
                 <Link href="/destination/maldives" legacyBehavior><a className="block py-1 hover:bg-sky-700 rounded-md">Maldives</a></Link>

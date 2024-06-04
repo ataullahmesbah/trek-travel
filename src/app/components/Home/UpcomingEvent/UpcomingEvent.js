@@ -55,6 +55,9 @@ const UpcomingEvents = () => {
                                     alt={event.title}
                                     layout="fill"
                                     objectFit="cover"
+                                    placeholder="blur"
+                                    quality={100}
+                                    blurDataURL={event.imageUrl}
                                     className="rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
                                 />
                                 <div className="absolute bottom-0 left-0 p-4  text-white w-full">

@@ -10,6 +10,9 @@ const TravelClub = () => {
                 src="https://i.ibb.co/0BGP9m0/sea.jpg"
                 alt="Travel Club"
                 layout="fill"
+                placeholder="blur"
+                quality={100}
+                blurDataURL="data:..."
                 objectFit="cover"
                 className="w-full h-full"
             />

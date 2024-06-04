@@ -28,6 +28,9 @@ const CleanSafeAdventures = () => {
                                 alt={`Image ${index + 1}`}
                                 width={600}
                                 height={400}
+                                placeholder="blur"
+                                quality={100}
+                                blurDataURL="data:..."
                                 className="w-full h-40 sm:h-48 md:h-56 lg:h-60 object-cover rounded-lg shadow-lg transform transition duration-300 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex justify-center items-center transition duration-300">

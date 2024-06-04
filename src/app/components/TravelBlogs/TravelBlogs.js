@@ -50,6 +50,9 @@ const TravelBlogs = () => {
                             width={400}
                             height={250}
                             objectFit="cover"
+                            placeholder="blur"
+                            quality={100}
+                            blurDataURL={blog.image}
                             alt={blog.title}
                             className="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105"
                         />
