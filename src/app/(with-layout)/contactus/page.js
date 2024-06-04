@@ -1,6 +1,6 @@
+import ContactUs from "../../components/Contact/Contact";
 
 
-import ContactUs from '@/app/components/Contact/Contact';
 
 
 

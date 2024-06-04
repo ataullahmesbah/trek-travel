@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const TripAlbum = () => {
+const TripAlbums = () => {
     const [images, setImages] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [zoomedImage, setZoomedImage] = useState(null);
@@ -101,4 +101,4 @@ const TripAlbum = () => {
     );
 };
 
-export default TripAlbum;
+export default TripAlbums;

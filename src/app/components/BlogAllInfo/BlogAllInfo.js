@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 
 
-const BlogAllInfo = () => {
+const BlogallInfo = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
@@ -115,4 +115,4 @@ const BlogAllInfo = () => {
     );
 };
 
-export default BlogAllInfo;
+export default BlogallInfo;

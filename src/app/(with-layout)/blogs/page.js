@@ -1,6 +1,7 @@
-import BlogAllInfo from "@/app/components/BlogAllInfo/BlogAllInfo";
-import TravelBlogs from "@/app/components/TravelBlogs/TravelBlogs";
+
+
 import Image from "next/image";
+import BlogallInfo from "../../components/BlogAllInfo/BlogAllInfo";
 
 const Blogs = () => {
     return (
@@ -26,7 +27,7 @@ const Blogs = () => {
 
 
             <div className="">
-                <BlogAllInfo />
+                <BlogallInfo />
             </div>
         </main>
     );

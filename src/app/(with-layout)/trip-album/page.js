@@ -1,7 +1,8 @@
-import ContainerPage from "@/app/container/page";
-import Image from "next/image";
-import TripAlbums from "@/app/components/TripAlbums/tripalbums";
-import VideoGallery from "@/app/components/videoGallery/videogallery";
+import ContainerPage from '../../components/container/page'
+import TripAlbums from '../../components/TripAlbums/tripalbums';
+import VideoGallery from "../../components/videoGallery/videogallery";
+
+
 
 // Static metadata export
 export const metadata = {
@@ -12,7 +13,7 @@ export const metadata = {
 const TripAlbum = () => {
     return (
         <div className="bg-gray-50 p-10">
-            <ContainerPage>
+           <ContainerPage>
                 <div className="mt-10">
                     <h1 className="text-black font-semibold text-xl text-center">Video Album</h1>
                     {/* underline */}
@@ -31,7 +32,7 @@ const TripAlbum = () => {
                     </div>
                     <TripAlbums />
                 </div>
-            </ContainerPage>
+                </ContainerPage>
         </div>
     );
 };

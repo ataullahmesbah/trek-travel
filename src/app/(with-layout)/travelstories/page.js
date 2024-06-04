@@ -1,5 +1,5 @@
-import AdventureStories from '@/app/components/AdventureStories/AdventureStories';
-import React from 'react';
+import AdventureStories from "../../components/AdventureStories/AdventureStories";
+
 
 export const metadata = {
     title: 'Travel Stories - Trek Explore Travel',

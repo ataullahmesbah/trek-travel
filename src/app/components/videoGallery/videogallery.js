@@ -1,7 +1,7 @@
 import React from 'react';
 import YouTubeEmbed from '../YouTubeEmbed/YouTubeEmbed';
 
-const videoGallery = () => {
+const VideoGallery = () => {
     const videoIds = [
         'i1Ms7lmRD3c?si=OnZ0Tz18AkNz2p0I',
         'y0wXQ5EdW_0?si=KYXyerD86qgi7Ro-',
@@ -22,4 +22,4 @@ const videoGallery = () => {
     );
 };
 
-export default videoGallery;
+export default VideoGallery;

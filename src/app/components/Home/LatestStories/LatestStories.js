@@ -1,10 +1,10 @@
 'use client'
 
 
-import ContainerPage from "@/app/container/page";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { GiDetour } from "react-icons/gi";
+import ContainerPage from "../../container/page";
 
 
 const LatestStories = () => {

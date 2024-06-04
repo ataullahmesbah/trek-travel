@@ -1,7 +1,8 @@
 
-import ContainerPage from "@/app/container/page";
+
 import Image from "next/image";
 import Link from "next/link";
+import ContainerPage from "../../container/page";
 
 const TravelPlan = () => {
     return (

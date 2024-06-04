@@ -9,7 +9,7 @@ import {
 
 const inter = Inter({ subsets: ['latin'] });
 
-import './global.css'
+import '../globals.css'
 
 
 

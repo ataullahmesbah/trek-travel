@@ -19,11 +19,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import gadgetsData from '/public/gadgets.json'; // Adjust the path accordingly
 
 import GadgetsNavbar from '../../GadgetsNavbar/GadgetsNavbar';
-import ContainerPage from '@/app/container/page';
+
 
 import { useTheme } from '@mui/material/styles';
 import CategoryList from '../../CategoryList/CategoryList';
 import ProductList from '../ProductList/ProductList';
+
 
 const categories = ["All Gadgets", "Backpack", "Apparel", "Climbing Gear", "Hammock", "Sleeping Bag", "Electronics", "Tents", "Water Sports", "Cooking", "Tools & Kit", "Running", "Others Products"];
 
@@ -52,7 +53,7 @@ const GadgetsHome = () => {
 
             {/* Second AppBar Start */}
             <AppBar position="static" sx={{ backgroundColor: 'rgb(12 74 110)' }}>
-                <ContainerPage>
+               
                     <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', gap: 2 }}>
                         <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
                             <MenuIcon />
@@ -63,7 +64,7 @@ const GadgetsHome = () => {
                             </Box>
                         )}
                     </Toolbar>
-                </ContainerPage>
+      
             </AppBar>
             {/* Second AppBar End */}
 

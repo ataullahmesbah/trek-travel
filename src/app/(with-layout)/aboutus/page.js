@@ -1,6 +1,6 @@
 // File: app/about/page.jsx (or pages/about.jsx if using the Pages Directory)
 import React from 'react';
-import ContainerPage from "@/app/container/page";
+import ContainerPage from "../../components/container/page";
 import Image from 'next/image';
 import { FaFacebook, FaYoutube, FaInstagram } from 'react-icons/fa';
 
