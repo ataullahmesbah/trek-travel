@@ -24,6 +24,11 @@ const banners = [
         title: 'Unforgettable Memories',
         description: 'Experience the thrill of a lifetime'
     },
+    {
+        imageUrl: 'https://i.ibb.co/p29GF7J/image.jpg',
+        title: 'Unforgettable Memories',
+        description: 'Experience the thrill of a lifetime'
+    }
 ];
 
 const Banner = () => {

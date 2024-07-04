@@ -6,8 +6,8 @@ import { FaAccessibleIcon, FaBackward, FaForward } from "react-icons/fa";
 
 
 export const metadata = {
-    title: 'Login | Treak Explore Travel',
-    description: 'Log in to access your account on Treak Explore Travel. Enter your credentials to securely sign in and manage your account.',
+    title: 'Login | Trek Explore Travel',
+    description: 'Log in to access your account on Trek Explore Travel. Enter your credentials to securely sign in and manage your account.',
 };
 
 const TrekExploreTravelIcon = () => (
