@@ -6,6 +6,8 @@ import TourConsultationForm from '../../components/TourConsultationForm/TourCons
 
 const EventDetails = () => {
 
+    // add ckyt
+
 
     return (
         <div className="bg-blue-50">
