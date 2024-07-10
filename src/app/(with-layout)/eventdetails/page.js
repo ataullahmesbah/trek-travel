@@ -1,28 +1,29 @@
 
 import Image from "next/image";
 import { FaBrush, FaRegClock, FaTimes } from "react-icons/fa";
-import EventTabs from '../../components/EventTabs/EventTabs'
+import LocationMap from '../../components/LocationMap/LocationMap';
+import EventSummary from '../../components/EventSummary/EventSummary'
 
 const EventDetails = () => {
 
 
     return (
-        <div className="">
-            <div className="mx-auto max-w-7xl pt-20 ">
+        <div className="bg-blue-50">
+            <div className="mx-auto max-w-7xl pt-20 px-4">
 
                 {/* Section --- 1 start */}
 
                 <div className="space-y-5">
                     <h1 className="text-center text-4xl">Events</h1>
                     <p className="text-center">Home - Events - Kiwi Link South East Asia 2024</p>
-                    <div className="w-full bg-gray-300 p-5">
-                        <p className="text-center">Monday, July 15, 2024</p>
+                    <div className=" ">
+                        <p className="text-center bg-gray-300 p-5">Monday, July 15, 2024</p>
                     </div>
                 </div>
 
                 {/* Section --- 2 start */}
 
-                <div className="container mx-auto px-4 py-8">
+                <div className="container mx-auto mt-5 rounded-md bg-white">
                     <div className="grid grid-cols-6 gap-4">
                         {/* First part with 4/6 width */}
                         <div className="col-span-6 md:col-span-4 space-y-5 relative">
@@ -35,7 +36,7 @@ const EventDetails = () => {
                                     placeholder="blur"
                                     quality={100}
                                     blurDataURL="data"
-                                    className="rounded-lg"
+                                    className="rounded-s-md"
 
                                 />
                             </div>
@@ -67,18 +68,24 @@ const EventDetails = () => {
                                 </div>
 
 
+
+                                {locations.map((location, index) => (
+                                    <div key={index} className="mb-8  h-4/5">
+
+
+                                        <LocationMap position={location.position} label={location.label} />
+                                    </div>
+                                ))}
                             </div>
                         </div>
-
-
 
 
                     </div>
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-6 gap-4">
+            <div className="mx-auto max-w-7xl pt-5  px-4">
+                <div className="grid grid-cols-6 gap-4 bg-white rounded-md">
                     <div className="col-span-6 md:col-span-4 space-y-5 relative">
 
                         {/* First part with 4/6 width */}
@@ -86,7 +93,7 @@ const EventDetails = () => {
                         <div className="relative w-full h-0 pb-[66.67%]">
 
 
-                            <EventTabs />
+                            <EventSummary />
 
 
 
@@ -97,6 +104,8 @@ const EventDetails = () => {
 
                     {/* Second part with 2/6 width */}
                     <div className="col-span-6 md:col-span-2 space-y-5 px-2">
+
+                        <TourConsultationForm />
 
                     </div>
 

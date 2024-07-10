@@ -47,6 +47,8 @@ const ContactUs = () => {
         }));
     };
 
+
+
     const validateForm = () => {
         const errors = {};
         if (!form.name.trim()) {
@@ -63,12 +65,13 @@ const ContactUs = () => {
         return errors;
     };
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const errors = validateForm();
         if (Object.keys(errors).length === 0) {
             emailjs.send(
-                'service_xsjy4eb',  // Replace with your EmailJS service ID
+                'service_2p9innf',  // Replace with your EmailJS service ID
                 'template_grt5q3s', // Replace with your EmailJS template ID
                 {
                     to_name: form.name,
@@ -89,6 +92,34 @@ const ContactUs = () => {
             setFormErrors(errors);
         }
     };
+
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const errors = validateForm();
+    //     if (Object.keys(errors).length === 0) {
+    //         emailjs.send(
+    //             '',  // Replace with your EmailJS service ID
+    //             '', // Replace with your EmailJS template ID
+    //             {
+    //                 to_name: form.name,
+    //                 from_name: form.email,
+    //                 message: form.message
+    //             },
+    //             '' // Replace with your EmailJS user ID
+    //         ).then((result) => {
+    //             console.log('Form submitted', result.text);
+    //             setFormSubmitted(true);
+    //             setForm({ name: '', email: '', message: '' });
+    //             setError('');
+    //         }).catch((error) => {
+    //             console.error('Error submitting form', error.text);
+    //             setError('Failed to send message, please try again later.');
+    //         });
+    //     } else {
+    //         setFormErrors(errors);
+    //     }
+    // };
 
     return (
         <div className="bg-gray-50 px-4 sm:px-6 lg:px-8 py-20">
