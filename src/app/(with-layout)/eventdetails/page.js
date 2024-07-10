@@ -16,8 +16,8 @@ const EventDetails = () => {
                 <div className="space-y-5">
                     <h1 className="text-center text-4xl">Events</h1>
                     <p className="text-center">Home - Events - Kiwi Link South East Asia 2024</p>
-                    <div className="w-full bg-gray-300 p-5">
-                        <p className="text-center">Monday, July 15, 2024</p>
+                    <div className=" ">
+                        <p className="text-center bg-gray-300 p-5">Monday, July 15, 2024</p>
                     </div>
                 </div>
 
