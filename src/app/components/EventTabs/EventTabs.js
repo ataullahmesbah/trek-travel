@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
 
-const EventSummary = () => {
+const EventTabs = () => {
     const [activeTab, setActiveTab] = useState('summary'); // State to manage active tab
 
     const handleTabClick = (tab) => {
@@ -10,9 +10,9 @@ const EventSummary = () => {
     };
 
     return (
-        <div className="max-w-3xl mx-auto ">
+        <div className="max-w-3xl mx-auto p-4">
             {/* Tab navigation */}
-            <div className="flex border-b-2 border-gray-100 ">
+            <div className="flex flex-wrap  bg-gray-100 rounded-full  space-x-2">
                 <TabItem label="Summary" tabName="summary" activeTab={activeTab} onClick={handleTabClick} />
                 <TabItem label="Itinerary" tabName="itinerary" activeTab={activeTab} onClick={handleTabClick} />
                 <TabItem label="Policies" tabName="policies" activeTab={activeTab} onClick={handleTabClick} />
@@ -34,7 +34,9 @@ const EventSummary = () => {
 const TabItem = ({ label, tabName, activeTab, onClick }) => {
     return (
         <div
-            className={`flex-1 bg-gray-100 rounded-sm py-2 text-center cursor-pointer ${activeTab === tabName ? 'border-b-4 border-sky-300 font-bold text-blue-950 uppercase' : 'text-gray-700 font-semibold uppercase'
+            className={`flex-1 rounded-full text-xs md:text-xl lg:text-lg p-1 text-center cursor-pointer transition-colors duration-300 ${activeTab === tabName
+                ? 'border-b-4 border-sky-300 font-bold text-white  bg-sky-900'
+                : 'text-gray-700 font-semibold  bg-gray-100'
                 }`}
             onClick={() => onClick(tabName)}
         >
@@ -43,4 +45,4 @@ const TabItem = ({ label, tabName, activeTab, onClick }) => {
     );
 };
 
-export default EventSummary;
+export default EventTabs;
