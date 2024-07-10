@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import EventsSummary from '../../components/Events/EventsSummary/EventsSummary';
 
 const EventTabs = () => {
     const [activeTab, setActiveTab] = useState('summary'); // State to manage active tab
@@ -21,7 +22,9 @@ const EventTabs = () => {
 
             {/* Content for each tab */}
             <div className="py-4">
-                {activeTab === 'summary' && <div className="py-4">Summary content goes here</div>}
+                {activeTab === 'summary' && <div className="py-4">
+                    <EventsSummary />
+                </div>}
                 {activeTab === 'itinerary' && <div className="py-4">Itinerary content goes here</div>}
                 {activeTab === 'policies' && <div className="py-4">Policies content goes here</div>}
                 {activeTab === 'options' && <div className="py-4">Options content goes here</div>}

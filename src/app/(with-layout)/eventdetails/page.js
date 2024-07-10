@@ -2,13 +2,14 @@
 import Image from "next/image";
 import { FaBrush, FaRegClock, } from "react-icons/fa";
 import EventTabs from '../../components/EventTabs/EventTabs'
+import TourConsultationForm from '../../components/TourConsultationForm/TourConsultationForm'
 
 const EventDetails = () => {
 
 
     return (
-        <div className="">
-            <div className="mx-auto max-w-7xl pt-20 ">
+        <div className="bg-blue-50">
+            <div className="mx-auto max-w-7xl pt-20 px-4">
 
                 {/* Section --- 1 start */}
 
@@ -22,7 +23,7 @@ const EventDetails = () => {
 
                 {/* Section --- 2 start */}
 
-                <div className="container mx-auto px-4 py-8">
+                <div className="container mx-auto mt-5 rounded-md bg-white">
                     <div className="grid grid-cols-6 gap-4">
                         {/* First part with 4/6 width */}
                         <div className="col-span-6 md:col-span-4 space-y-5 relative">
@@ -35,7 +36,7 @@ const EventDetails = () => {
                                     placeholder="blur"
                                     quality={100}
                                     blurDataURL="data"
-                                    className="rounded-lg"
+                                    className="rounded-s-md"
 
                                 />
                             </div>
@@ -77,8 +78,8 @@ const EventDetails = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-6 gap-4">
+            <div className="mx-auto max-w-7xl pt-5  px-4">
+                <div className="grid grid-cols-6 gap-4 bg-white rounded-md">
                     <div className="col-span-6 md:col-span-4 space-y-5 relative">
 
                         {/* First part with 4/6 width */}
@@ -96,6 +97,8 @@ const EventDetails = () => {
 
                     {/* Second part with 2/6 width */}
                     <div className="col-span-6 md:col-span-2 space-y-5 px-2">
+
+                        <TourConsultationForm />
 
                     </div>
 
