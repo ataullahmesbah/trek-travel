@@ -1,8 +1,8 @@
 
 import Image from "next/image";
-import { FaBrush, FaRegClock, } from "react-icons/fa";
-import EventTabs from '../../components/EventTabs/EventTabs'
-import TourConsultationForm from '../../components/TourConsultationForm/TourConsultationForm'
+import { FaBrush, FaRegClock, FaTimes } from "react-icons/fa";
+import LocationMap from '../../components/LocationMap/LocationMap';
+import EventSummary from '../../components/EventSummary/EventSummary'
 
 const EventDetails = () => {
 
@@ -71,7 +71,13 @@ const EventDetails = () => {
 
 
 
+                                {locations.map((location, index) => (
+                                    <div key={index} className="mb-8  h-4/5">
 
+
+                                        <LocationMap position={location.position} label={location.label} />
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
@@ -89,7 +95,8 @@ const EventDetails = () => {
                         <div className="relative w-full h-0 pb-[66.67%]">
 
 
-                            <EventTabs />
+                            <EventSummary />
+
 
 
 
